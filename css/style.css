@@ -10,6 +10,8 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +19,7 @@ body {
   font-weight: 400;
   color: #555;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -26,6 +29,20 @@ body {
   background-color: #fdf2e9;
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 9.6rem;
+  width: 100%;
+  padding: 0 4.8rem;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  z-index: 100000;
+  transition: all 0.4s ease;
 }
 
 .logo {
@@ -67,6 +84,25 @@ body {
   background-color: #cf711f;
 }
 
+/* MOBILE  */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 .section-hero {
   background-color: #fdf2e9;
   padding: 7.8rem 0rem;
@@ -103,6 +139,12 @@ body {
   font-size: 4.4rem;
   line-height: 1.2;
   margin-bottom: 9.6rem;
+}
+
+.heading-turtiary {
+  font-size: 2.9rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
@@ -274,12 +316,6 @@ body {
   margin-bottom: 1.2rem;
 }
 
-.heading-turtiary {
-  font-size: 2.9rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
-}
-
 .step-description {
   font-size: 1.8rem;
   line-height: 1.8;
@@ -414,6 +450,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2rem;
 }
 
 .list-icon {
